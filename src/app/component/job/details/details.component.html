@@ -6,6 +6,8 @@
     </div>
     <div class="row space-top">
         <div class="col-md-4">
+        </div>
+        <div class="col-md-4 pb-5">
             <div class="card text-white bg-primary">
                 <div class="card-body">
                     <blockquote class="card-blockquote">
@@ -13,6 +15,10 @@
                     </blockquote>
                 </div>
             </div>
+        </div>
+   </div>
+    <div class="row space-top">
+        <div class="col-md-4">
         </div>
         <div class="col-md-4">
             <p>Company: {{job$.company}}</p>
@@ -23,4 +29,8 @@
             <p *ngIf="job$.email">Email: {{job$.email}}</p>
         </div>
     </div>
+    <div class="pb-5 pt-5">
+        <input  class="btn btn-primary"  type="button" value="Back" onclick="window.history.back()">
+    </div>
+
 </div>

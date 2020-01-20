@@ -40,7 +40,7 @@ import { SearchComponent } from './component/job/search/search.component';
     AllComponent,
     CreateComponent,
     CategoryComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

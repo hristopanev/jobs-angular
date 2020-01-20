@@ -10,7 +10,7 @@ const getSingleJob = "http://localhost:5000/job/details/";
 const deleteJob = "http://localhost:5000/job/delete/";
 const getUserJob = "http://localhost:5000/job/user";
 const getJobsByCategory = "http://localhost:5000/job/category/";
-const search = "http://localhost:5000/job/search";
+const search = "http://localhost:5000/job/search/";
 
 @Injectable({
   providedIn: 'root'
@@ -44,7 +44,7 @@ export class JobService {
   }
 
   //search
-  search(query: string): Observable<Array<Job>> {
-    return this.http.get<Array<Job>>(search + `&query=${query}`)
+  search(query): Observable<Array<Job>> {
+    return this.http.get<Array<Job>>(search + query)
   }
 }

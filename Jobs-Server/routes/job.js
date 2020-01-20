@@ -129,10 +129,9 @@ router.get('/category/:category', authCheck, (req, res) => {
     })
 })
 
-router.get('/search', authCheck, (req, res) => {
+router.get('/search/:query', authCheck, (req, res) => {
   const query = req.Job.position
-
-  Job.find({position: query})
+  Job.find({query: query})
     .then((job) => {
       return res.status(200).json(job)
     })

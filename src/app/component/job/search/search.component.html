@@ -1,8 +1,30 @@
-<ng-template [ngIf]="searchJob">
-    <p>Search for a job using the form below:</p>
-	<div class="row">
-		<div class="col-lg-2" *ngFor="let movie of searchJob">
-			<!-- <app-all [job] = "job" ></app-all> -->
-		</div>
-	</div>
-</ng-template>
+<h1 class="text-center text-dark pb-5 pt-5">Result of Search</h1>
+<hr class="hr-2 bg-dark w-75">
+<table class="table table-hover w-75 mx-auto">
+    <thead class="table-form">
+        <tr class="row mx-auto">
+            <th class="col-md-2 text-center">Logo</th>
+            <th class="col-md-2 text-center">Company</th>
+            <th class="col-md-2 text-center">Position</th>
+            <th class="col-md-2 text-center">Description</th>
+            <th class="col-md-2 text-center">Salary</th>
+            <th class="col-md-2 text-center">See Job</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row mx-auto" *ngFor="let job of jobs$">
+        <th class="col-md-2 text-center"><img src="{{ job.image }}" width="40" height="40"></th>
+            <th class="col-md-2 text-center">{{ job.company }}</th>
+            <th class="col-md-2 text-center">{{ job.position }}</th>
+            <th class="col-md-2 text-center">{{ job.description | slice: 0:11 }}</th>
+            <th class="col-md-2 text-center" >{{ job.salary }}</th>
+            <th class="col-md-2 text-center">
+                <form id="add-product-form" class="form w-15 mx-auto">
+                    <div class="button-holder d-flex justify-content-center">
+                        <a  [routerLink]="['/job/details/', job._id]" class="btn btn-primary">Details</a>
+                    </div>
+                </form>
+            </th>
+        </tr>
+    </tbody>
+</table>

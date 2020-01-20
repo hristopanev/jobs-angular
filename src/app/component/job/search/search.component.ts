@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   query: string;
 
   constructor(private jobService: JobService, private route: ActivatedRoute) {}
+  jobs$: Job[] = [];
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
@@ -20,12 +21,16 @@ export class SearchComponent implements OnInit {
     })
 
     const query = this.route.snapshot.queryParams['search'];
-    //HERE!
-    this.jobService.search(query).subscribe((data) => {
-      console.log(data)
-      this.searchJob = data['result']
-    })
 
+    this.jobService.getAllJob().subscribe((jobs) => {
+        for(var job of jobs) {
+          if(job['position'].toLowerCase() == query.toLowerCase() 
+          || job['company'].toLowerCase() == query.toLowerCase()
+          || job['category'].toLowerCase() == query.toLowerCase()) {
+            this.jobs$.push(job)
+          }
+        }
+    })
   }
 
 }

@@ -16,35 +16,14 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
 
-    let cat;
-    var alljob: Job[] = [];
-
     this.route.params.subscribe((data) => {
-      cat = data['category'];
       this.jobService.getAllJob().subscribe((job) => {
         for (var j of job) {
             if(j['category'] == data['category']) {
               this.jobs$.push(j)
             }
         }
-    
       })
-    
-      for(var j of this.jobs$) {
-        console.log("!!!!!!!!!!!!!!!!!!!!!!")
-      }
     })
-
-
-
-
-//    let jobs = [];
-//    this.route.params.subscribe((data) => {
-//      console.log("TUK!!!!!!!!!!!")
-//      let category = data['category'];
-//      this.jobService.getJob(category).subscribe((data) => {
-//        this.jobs$.push(data)
-//      })
-//    })
   }
 }
