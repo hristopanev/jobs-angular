@@ -11,12 +11,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoryComponent implements OnInit {
   jobs$: Job[] = [];
+  category;
 
   constructor(private route: ActivatedRoute, private jobService: JobService) { }
 
   ngOnInit() {
 
     this.route.params.subscribe((data) => {
+      this.category = data['category'];
       this.jobService.getAllJob().subscribe((job) => {
         for (var j of job) {
             if(j['category'] == data['category']) {
