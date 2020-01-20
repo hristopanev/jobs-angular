@@ -129,14 +129,6 @@ router.get('/category/:category', authCheck, (req, res) => {
     })
 })
 
-router.get('/search/:query', authCheck, (req, res) => {
-  const query = req.Job.position
-  Job.find({query: query})
-    .then((job) => {
-      return res.status(200).json(job)
-    })
-})
-
 router.delete('/delete/:id', authCheck, (req, res) => {
   const id = req.params.id
   const user = req.user._id

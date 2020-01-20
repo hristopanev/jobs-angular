@@ -29,7 +29,6 @@ export class CreateComponent implements OnInit {
 
   createJob() {
     this.jobService.createJob(this.form.value).subscribe((data) => {
-      console.log("DATA!!!!!!", data);
       this.router.navigate(['/job/all'])
     })
   }

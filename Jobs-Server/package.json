@@ -1,13 +1,13 @@
 {
-  "name": "cars-system",
+  "name": "jobs-system",
   "version": "0.0.1",
-  "description": "Cars system",
+  "description": "Jobs system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [
-    "cars",
+    "jobs",
     "system"
   ],
   "author": "Hristo Panev",
