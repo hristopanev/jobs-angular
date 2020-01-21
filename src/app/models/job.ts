@@ -5,7 +5,7 @@ export interface Job {
     description: string;
     salary: number;
     image: string;
-    telefon: string;
+    telephone: number;
     email: string;
     category: string;
 }

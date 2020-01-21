@@ -10,6 +10,7 @@ function validateJobForm (payload) {
   let message = ''
 
   payload.salary = parseInt(payload.salary);
+  payload.telephone = parseInt(payload.telephone);
 
   if (!payload || typeof payload.company !== 'string' || payload.company.length < 3) {
     isFormValid = false
@@ -29,6 +30,11 @@ function validateJobForm (payload) {
   if (!payload || !payload.salary || payload.salary < 0) {
     isFormValid = false
     errors.salary = 'Salary must be a positive number.'
+  }
+  
+  if (!payload || !payload.telephone || payload.telephone.telephone < 6) {
+    isFormValid = false
+    errors.telephone = 'Telephone must be more than 6 symbolen.'
   }
 
   if (!payload || typeof payload.image !== 'string' || payload.image.length === 0) {

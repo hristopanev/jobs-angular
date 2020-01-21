@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
       salary: ['', [Validators.required, Validators.min(0.1)]],
       category: ['', Validators.required],
       image: ['', Validators.required],
-      telefon: ['', Validators.nullValidator],
+      telephone: ['', Validators.nullValidator],
       email: ['', [Validators.required, Validators.email]],
     })
   }

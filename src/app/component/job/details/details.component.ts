@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit {
     this.route.params.subscribe((data) => {
       let id = data['id'];
       this.jobService.getJob(id).subscribe((data) => {
+        console.log(data.telephone)
         this.job$ = data
       })
     })

@@ -21,7 +21,7 @@ const jobSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.String,
     required: true
   },
-  telefon: {
+  telephone: {
     type: mongoose.Schema.Types.Number,
   },
   email: {
