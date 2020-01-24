@@ -1,5 +1,5 @@
 # Jobs-Server
 
-nmp install
+npm install
 
 node index.js
