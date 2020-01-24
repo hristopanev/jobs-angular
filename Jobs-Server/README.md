@@ -1,4 +1,4 @@
-# Jobs-Server
+# Jobs
 
 npm install
 
