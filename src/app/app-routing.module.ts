@@ -20,9 +20,9 @@ const routes: Routes = [
   { path: 'job/create', component: CreateComponent,canActivate: [AuthGuard] },
   { path: 'job/all', component: AllComponent,canActivate: [AuthGuard] },
   { path: 'job/user', component: UserComponent,canActivate: [AuthGuard] },
-  { path: 'job/details/:id', component: DetailsComponent,canActivate: [AuthGuard] },
-  { path: 'job/category/:category', component: CategoryComponent, canActivate: [AuthGuard] },
-  { path: 'job/search', component: SearchComponent, canActivate: [AuthGuard] },
+  { path: 'job/details/:id', component: DetailsComponent },
+  { path: 'job/category/:category', component: CategoryComponent },
+  { path: 'job/search', component: SearchComponent },
 
 ];
 
