@@ -1,14 +1,19 @@
-<div class="jumbotron">
-    <div class="container">
-      <h1>Find a job</h1>
-      <p>Search for a job using the form below:</p>
+<div class="index-main">
+  <div class="row">
+      <div  class="content welcome text-center" >
+          <h1 class="p-3">Welcome to Jobs</h1>
+      </div>
+  </div>
+    <div class="container p-5">
+      <h1 class="text-white">Find a job</h1>
+      <p class="text-white">Search for a job using the form below:</p>
       <form #j="ngForm" (ngSubmit)="search()">
         <input required  minlength="2" name="query" class="form-control input-lg" type="text" placeholder="Search" aria-label="Search" ngModel>
         <button [disabled]="j.invalid" class="btn btn-primary mt-2" type="submit">Search</button>
       </form>
     </div>
  </div>
- <div class="row">
+ <div class="row p-5">
      <div class="col-lg-3"></div>
      <div class="col-lg-3"><ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">

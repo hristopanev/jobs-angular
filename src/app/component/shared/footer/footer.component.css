@@ -1,0 +1,10 @@
+.under-footer {
+    background: black;
+}
+li {
+    list-style: none;
+}
+
+body, html {
+    height: 100%;
+  }

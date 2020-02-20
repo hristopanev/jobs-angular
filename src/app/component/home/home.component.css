@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+  }
+
+.index-main {
+    background-image: url("claudio-schwarz-purzlbaum-HUROgx3BSq4-unsplash.jpg");
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 2rem 4rem;
+}
+
+.welcome {
+    font-display: big;
+    margin: 0 auto;
+    padding: 2rem; 
+    text-align: center;
+    font-family: initial;
+    padding-bottom: 2rem;
+    color: whitesmoke
+}
+
+.welcome h1 {
+    font-size: -webkit-xxx-large;
+}
